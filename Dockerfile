@@ -20,3 +20,4 @@ RUN dotnet publish "om-svc-gateway/om-svc-gateway.csproj" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "om-svc-gateway.dll"]
