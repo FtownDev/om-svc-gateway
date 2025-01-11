@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder =>
     {
-        builder.WithOrigins("https://app.ftown.dev")
+        builder.WithOrigins(["https://app.ftown.dev", "http://localhost:4200"])
                .AllowAnyMethod()
                .AllowAnyHeader();
     });
